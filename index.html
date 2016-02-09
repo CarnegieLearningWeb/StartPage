@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <title>Document</title>
   
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+
   <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
   <script src="datamaps.us.js"></script>
@@ -34,40 +37,6 @@
 
 
   <script>
-      var width = document.getElementById('container').offsetWidth;
-      var height = document.getElementById('container').offsetHeight;
-
-      var map = new Datamap({
-          element: document.getElementById('map'),
-          scope: 'usa',
-          fills: {
-            HAS_SCHOOLS: '#666666',
-            defaultFill: '#CDCCCC'       // the colours
-        },
-             data: {                     //Place data here
-              NY: {
-                fillKey: 'HAS_SCHOOLS'
-              },
-        },
-          setProjection: function(element, options) {
-            var projection, path;
-            projection = d3.geo.albersUsa()                    
-                           .translate([(width/2), (height/2)]);
-            path = d3.geo.path()
-                     .projection( projection );
-            return {path: path, projection: projection};
-          },
-          done: function(datamap) {
-              datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
-                  console.log(geography);
-                  console.log(geography.properties);
-              });
-          }
-      });
-
-      // Pass empty strings to disable labels from certain states
-      var newLabels = {'AK':'Alaska', 'AL':' '};
-      map.labels({'customLabelText': newLabels});
   </script>
 
 </body>

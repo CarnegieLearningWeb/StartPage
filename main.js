@@ -1,4 +1,5 @@
 // main.js
+require('./src/map.js')
 var Vue = require('vue')
 // require a *.vue component
 var App = require('./src/components/App.vue')

@@ -1,7 +1,8 @@
 <!--Based on the grid component from Vuejs examples-->
 <template>
-    <input name="query" v-model="filterKey">
-    <table>
+    <input id="state" v-model="state" type="hidden">
+    <input name="query" v-model="filterKey" placeholder="Enter your school name">
+    <table class="centered">
         <thead>
         <tr>
             <th v-for="key in columns"
@@ -18,9 +19,10 @@
         <tr v-for="
         entry in data
         | filterBy filterKey
+        | filterBy state in 'state'
         | orderBy sortKey sortOrders[sortKey]">
             <td v-for="key in columns">
-                {{entry[key]}}
+                <a href="https://myglife.org/usa/{{entry['wiki']}}">{{entry[key]}}</a>
             </td>
         </tr>
         </tbody>
@@ -44,6 +46,7 @@
             return {
                 sortKey: '',
                 sortOrders: sortOrders,
+                state: ''
             }
         },
         methods: {
