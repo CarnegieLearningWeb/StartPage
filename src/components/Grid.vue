@@ -4,7 +4,7 @@
     <input name="query" v-model="filterKey" placeholder="Enter your school name">
     <table class="centered">
         <thead>
-        <tr>
+        <!-- <tr>
             <th v-for="key in columns"
                 @click="sortBy(key)"
                 :class="{active: sortKey == key}">
@@ -13,7 +13,7 @@
                 :class="sortOrders[key] > 0 ? 'asc' : 'dsc'">
           </span>
             </th>
-        </tr>
+        </tr> -->
         </thead>
         <tbody>
         <tr v-for="
@@ -29,7 +29,9 @@
     </table>
 </template>
 <style>
-
+    thead{
+        height: '1px' !important;
+    }
 </style>
 <script>
     export default{
