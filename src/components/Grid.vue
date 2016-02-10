@@ -1,7 +1,7 @@
 <!--Based on the grid component from Vuejs examples-->
 <template>
     <input id="state" v-model="state" type="hidden">
-    <input name="query" v-model="filterKey" placeholder="Enter your school name">
+    <input id="searchbox" name="query" v-model="filterKey" placeholder="Enter your school name">
     <table class="centered">
         <thead>
         <!-- <tr>

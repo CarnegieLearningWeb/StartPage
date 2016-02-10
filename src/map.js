@@ -29,24 +29,51 @@ var map = new Datamap({
   },
   done: function(datamap) {
     datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
+      window.alpha = geography;
+      window.beta = datamap;
       console.log(geography.id);
+
+      // Select the path for the target state
+      var $this = d3.select('.'+geography.id);
       
-      var newChloropleth = {};
-      newChloropleth[geography.id] = {
-        fillKey: 'SELECTED'
-      };
+      // Create a new object for previousAttributes for mouseleave to use
+      var previousAttributes = {
 
-      // map.updateChoropleth(newChloropleth, {reset: true});
-      map.updateChoropleth(newChloropleth);
+              'fill':  '#fb9b3b',
 
+              'stroke': $this.style("stroke"),
+              'stroke-width': $this.style("stroke-width"),
+              'fill-opacity': $this.style("fill-opacity")
+            };
+      
+      $this.attr('data-previousAttributes', JSON.stringify(previousAttributes));
+
+
+      updateSelection(geography.id);
+
+
+
+      
       var el = document.getElementById("state");
       el.value = geography.properties.name;
       el.dispatchEvent(new Event('change'));
 
+      // Set focus to search input
+      document.getElementById("searchbox").focus();
 
     });
   }
 });
+
+function updateSelection(id){
+
+  var newChloropleth = {};
+  newChloropleth[id] = {
+    fillKey: 'SELECTED'
+  };
+  
+  map.updateChoropleth(newChloropleth);
+}
 
 // Pass empty strings to disable labels from certain states
 var newLabels = {
