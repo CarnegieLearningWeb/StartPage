@@ -3,33 +3,36 @@
 </style>
 
 <template>
-
-  <div class="row">
-    <div class="col s4 offset-s4">
-        <grid 
-            :data="[
-                    
-                    {state: 'Texas', name: 'Beehive Science and Technology Academy', wiki: 'BSTA'},
-                    {state: 'Texas', name: 'Bedichek Middle School', wiki: 'bedichekms'},
-                    {state: 'Texas', name: 'Covington Middle School', wiki: 'cvms'},
-                    {state: 'Texas', name: 'David Crockett High School', wiki: 'dvchs'},
-                    {state: 'California', name: 'Alief Taylor High School', wiki: 'ATHS'},
-                    {state: 'California', name: 'Elisk Ninth Grade Center', wiki: 'ENGC'},
-                    {state: 'California', name: 'Burr and Burton Academy', wiki: 'bba'},
-                    {state: 'California', name: 'Cathedral High School Los Angeles', wiki: 'cath'},
-                    {state: 'California', name: 'Little Snake River Valley School', wiki: 'LSRV'}
-
-                    ]"
-            :columns="['name']"
-            :state="Texas"
-        >
-        </grid>
+  
+    <div>
+        <div v-if="schools.length > 0" id="main" class="mdl-grid">
+            <div id="leftnav" class="mdl-cell mdl-cell--9-col">
+                <globaloria-map :schools="schools"></globaloria-map>
+                <grid 
+                    :data="schools"
+                    :columns="['name']"
+                >
+                </grid>
+            </div>
+            <div id="rightnav" class="mdl-cell mdl-cell--3-col">
+              
+              <news-feed></news-feed>
+              
+              <div style="width:300px;">
+                <!-- Replaced with actual feed through script. Should be configured from Twitter account. -->
+                <a v-twitter class="twitter-timeline" href="https://twitter.com/globaloria" data-widget-id="714918275847729152">Tweets by @globaloria</a>
+              </div>
+                  
+            </div>
+        </div>        
     </div>
-    </div>
+  
 </template>
 
 <script>
     import Grid from './Grid.vue';
+    import NewsFeed from './NewsFeed.vue';
+    import GlobaloriaMap from './GlobaloriaMap.vue';
 
 
     export default{
@@ -37,13 +40,33 @@
             
         },
         data() {
-            
+            return {
+                  schools: []
+            };
         },
         methods: {
             
         },
+        ready(){
+            $.ajax({
+                type: "GET",
+                url: 'http://dev.myglife.org/tasks/task_get_active_locations'
+              }).success( function(response){
+                console.log(JSON.parse(response));
+                this.schools = JSON.parse(response);
+              }.bind(this)).error(function(err){
+                console.log(err);
+              }.bind(this));
+
+            // Load Twitter feed
+            setTimeout(function(){
+                  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+            }, 500);
+        },
         components:{
-          grid: Grid
+          Grid,
+          NewsFeed,
+          GlobaloriaMap
         }
     }
 </script>
