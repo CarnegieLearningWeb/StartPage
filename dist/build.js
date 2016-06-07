@@ -11718,9 +11718,9 @@
 	    ready: function ready() {
 	        $.ajax({
 	            type: "GET",
-	            url: 'http://dev.myglife.org/tasks/task_get_active_locations'
+	            url: 'http://progress.myglife.org/tasks/task_get_active_locations'
 	        }).success(function (response) {
-	            console.log(JSON.parse(response));
+	            // console.log(JSON.parse(response));
 	            this.schools = JSON.parse(response);
 	        }.bind(this)).error(function (err) {
 	            console.log(err);
@@ -11886,9 +11886,9 @@
 	//                     <option value="Elementary School">Elementary Schools</option>
 	//                     <option value="Middle School">Middle Schools</option>
 	//                     <option value="High School">High Schools</option>
-	//                     <option value="College">College</option>
+	//                     <!-- <option value="College">College</option>
 	//                     <option value="Alternative / At-risk Program">Alternative / At-risk Program</option>
-	//                     <option value="Community Center">Community Center</option>
+	//                     <option value="Community Center">Community Center</option> -->
 	//                 </select>
 	//             </div>
 	//         </div>
@@ -11902,30 +11902,18 @@
 	//                 | filterBy filterKey
 	//                 | filterBy state in 'state'
 	//                 | filterBy grade in 'grade'
-	//                 | orderBy sortKey sortOrders[sortKey]" class="mdl-cell--6-col">
+	//                 | orderBy sortKey sortOrders[sortKey]"
+	//                 class="mdl-cell--6-col"
+	//                 >
 	//                     <div v-for="key in columns" style="text-align: center; margin-bottom: 0.3rem;">
-	//                         <a target="_blank" href="https://myglife.org/usa/{{entry['wiki']}}">{{entry[key]}}</a>
+	//                         <a
+	//                             target="_blank"
+	//                             href="{{entry['url']}}"
+	//                             style="white-space: nowrap;"
+	//                         >{{entry[key]}}</a>
 	//                     </div>
 	//                 </div>
 	//             </div>
-	//             <!-- <table>
-	//                 <thead>
-	//
-	//                 </thead>
-	//                 <tbody>
-	//                 <tr v-for="
-	//                 entry in data
-	//                 | filterBy filterKey
-	//                 | filterBy state in 'state'
-	//                 | filterBy grade in 'grade'
-	//                 | orderBy sortKey sortOrders[sortKey]">
-	//                     <td v-for="key in columns">
-	//                         <a target="_blank" href="https://myglife.org/usa/{{entry['wiki']}}">{{entry[key]}}</a>
-	//                     </td>
-	//                 </tr>
-	//                 </tbody>
-	//             </table> -->
-	//
 	//         </div>
 	//     </div>
 	// </template>
@@ -11968,25 +11956,9 @@
 	        sortBy: function sortBy(key) {
 	            this.sortKey = key;
 	            this.sortOrders[key] = this.sortOrders[key] * -1;
-	        },
-	        loadSchools: function loadSchools() {
-
-	            // this.$http.get('http://dev.myglife.org/tasks/task_get_active_locations')
-	            // this.$http.get('http://globaloria.com/api/core/get_category_posts/?slug=News')
-	            //     .then(
-	            //       function (response) {
-	            //         console.log("Schools found");
-	            //         console.log(response);
-	            //       },
-	            //       function (err) {
-	            //         console.log(err);
-	            //       }
-	            //     );
 	        }
 	    },
-	    ready: function ready() {
-	        this.loadSchools();
-	    }
+	    ready: function ready() {}
 	};
 	// </script>
 
@@ -11994,7 +11966,7 @@
 /* 53 */
 /***/ function(module, exports) {
 
-	module.exports = "\n    <div>\n        <input id=\"state\" v-model=\"state\" type=\"hidden\">\n        \n        <div class=\"flex-center-center\">\n            <div>\n                <div v-mdl class=\"mdl-textfield mdl-js-textfield\">\n                    <input class=\"mdl-textfield__input\" type=\"text\" id=\"searchbox\" name=\"query\" v-model=\"filterKey\" placeholder=\"Enter your school name\">\n                    <label class=\"mdl-textfield__label\" for=\"searchbox\">Text...</label>\n                </div>\n            </div>\n            \n            <div>\n                <select v-model=\"grade\">\n                    <option value=\"\">Filter by...</option>\n                    <option value=\"Elementary School\">Elementary Schools</option>\n                    <option value=\"Middle School\">Middle Schools</option>\n                    <option value=\"High School\">High Schools</option>\n                    <option value=\"College\">College</option>\n                    <option value=\"Alternative / At-risk Program\">Alternative / At-risk Program</option>\n                    <option value=\"Community Center\">Community Center</option>\n                </select>\n            </div>\n        </div>\n        \n        <div v-if=\"state!=''\" class=\"flex-center-center\">{{schoolFilterFullname}} in {{state}}</div>\n\n        <div class=\"flex-center-center\">\n            <div class=\"mdl-grid\">\n                <div v-for=\"\n                (index, entry) in data\n                | filterBy filterKey\n                | filterBy state in 'state'\n                | filterBy grade in 'grade'\n                | orderBy sortKey sortOrders[sortKey]\" class=\"mdl-cell--6-col\">\n                    <div v-for=\"key in columns\" style=\"text-align: center; margin-bottom: 0.3rem;\">\n                        <a target=\"_blank\" href=\"https://myglife.org/usa/{{entry['wiki']}}\">{{entry[key]}}</a>\n                    </div>\n                </div>\n            </div>\n            <!-- <table>\n                <thead>\n                \n                </thead>\n                <tbody>\n                <tr v-for=\"\n                entry in data\n                | filterBy filterKey\n                | filterBy state in 'state'\n                | filterBy grade in 'grade'\n                | orderBy sortKey sortOrders[sortKey]\">\n                    <td v-for=\"key in columns\">\n                        <a target=\"_blank\" href=\"https://myglife.org/usa/{{entry['wiki']}}\">{{entry[key]}}</a>\n                    </td>\n                </tr>\n                </tbody>\n            </table> -->\n\n        </div>\n    </div>\n";
+	module.exports = "\n    <div>\n        <input id=\"state\" v-model=\"state\" type=\"hidden\">\n        \n        <div class=\"flex-center-center\">\n            <div>\n                <div v-mdl class=\"mdl-textfield mdl-js-textfield\">\n                    <input class=\"mdl-textfield__input\" type=\"text\" id=\"searchbox\" name=\"query\" v-model=\"filterKey\" placeholder=\"Enter your school name\">\n                    <label class=\"mdl-textfield__label\" for=\"searchbox\">Text...</label>\n                </div>\n            </div>\n            \n            <div>\n                <select v-model=\"grade\">\n                    <option value=\"\">Filter by...</option>\n                    <option value=\"Elementary School\">Elementary Schools</option>\n                    <option value=\"Middle School\">Middle Schools</option>\n                    <option value=\"High School\">High Schools</option>\n                    <!-- <option value=\"College\">College</option>\n                    <option value=\"Alternative / At-risk Program\">Alternative / At-risk Program</option>\n                    <option value=\"Community Center\">Community Center</option> -->\n                </select>\n            </div>\n        </div>\n        \n        <div v-if=\"state!=''\" class=\"flex-center-center\">{{schoolFilterFullname}} in {{state}}</div>\n\n        <div class=\"flex-center-center\">\n            <div class=\"mdl-grid\">\n                <div v-for=\"\n                (index, entry) in data\n                | filterBy filterKey\n                | filterBy state in 'state'\n                | filterBy grade in 'grade'\n                | orderBy sortKey sortOrders[sortKey]\" \n                class=\"mdl-cell--6-col\"\n                >\n                    <div v-for=\"key in columns\" style=\"text-align: center; margin-bottom: 0.3rem;\">\n                        <a \n                            target=\"_blank\" \n                            href=\"{{entry['url']}}\"\n                            style=\"white-space: nowrap;\"\n                        >{{entry[key]}}</a>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n";
 
 /***/ },
 /* 54 */
@@ -12071,62 +12043,8 @@
 	// <style scoped>
 	// </style>
 	//
-	// <template>
-	//   <div style="width:300px;">
-	//     <div class="mdl-card mdl-shadow--2dp" style="background-color: #24a4cd; border-radius: 25px;">
-	//       <div class="mdl-card__title">
-	//         <h2 class="mdl-card__title-text">Globey winners announced!</h2>
-	//       </div>
-	//       <div class="mdl-card__supporting-text">
-	//         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	//         tempor incididunt ut labore et dolore magna aliqua.
-	//       </div>
-	//     </div>
-	//     <br>
-	//     <div class="mdl-card mdl-shadow--2dp" style="background-color: #24a4cd;">
-	//       <div class="mdl-card__title">
-	//         <h2 class="mdl-card__title-text">Globey winners announced!</h2>
-	//       </div>
-	//       <div class="mdl-card__supporting-text">
-	//         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	//         tempor incididunt ut labore et dolore magna aliqua.
-	//       </div>
-	//     </div>
-	//     <br>
-	//     <div class="mdl-card mdl-shadow--2dp" style="border-radius: 25px;">
-	//       <div class="mdl-card__title" style="background-color: #24a4cd;">
-	//         <h2 class="mdl-card__title-text">Try our new course</h2>
-	//       </div>
-	//       <div class="mdl-card__supporting-text">
-	//         Duis aute irure dolor in reprehenderit in voluptate velit esse
-	//         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	//         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-	//       </div>
-	//     </div>
-	//     <br>
-	//     <div class="mdl-card mdl-shadow--2dp">
-	//       <div class="mdl-card__title" style="background-color: #24a4cd;">
-	//         <h2 class="mdl-card__title-text">Try our new course</h2>
-	//       </div>
-	//       <div class="mdl-card__supporting-text">
-	//         Duis aute irure dolor in reprehenderit in voluptate velit esse
-	//         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	//         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-	//       </div>
-	//     </div>
-	//     <br>
-	//     <div class="mdl-card mdl-shadow--2dp">
-	//       <div class="mdl-card__title">
-	//         <h2 class="mdl-card__title-text">Try our new course</h2>
-	//       </div>
-	//       <div class="mdl-card__supporting-text">
-	//         Duis aute irure dolor in reprehenderit in voluptate velit esse
-	//         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	//         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-	//       </div>
-	//     </div>
-	//   </div> 
-	//   <!-- {{{posts}}} -->
+	// <template> 
+	//   {{{posts}}}
 	// </template>
 	//
 	// <script>
@@ -12146,7 +12064,7 @@
 	            dataType: 'jsonp'
 	        }).success(function (response) {
 	            // console.log(JSON.stringify(response));
-	            console.log(response);
+	            // console.log(response);
 
 	            this.posts = response.page.content;
 	        }.bind(this)).error(function (err) {
@@ -12162,7 +12080,7 @@
 /* 58 */
 /***/ function(module, exports) {
 
-	module.exports = "\n  <div style=\"width:300px;\" _v-2a6739b2=\"\">\n    <div class=\"mdl-card mdl-shadow--2dp\" style=\"background-color: #24a4cd; border-radius: 25px;\" _v-2a6739b2=\"\">\n      <div class=\"mdl-card__title\" _v-2a6739b2=\"\">\n        <h2 class=\"mdl-card__title-text\" _v-2a6739b2=\"\">Globey winners announced!</h2>\n      </div>\n      <div class=\"mdl-card__supporting-text\" _v-2a6739b2=\"\">\n        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n        tempor incididunt ut labore et dolore magna aliqua. \n      </div>\n    </div>\n    <br _v-2a6739b2=\"\">\n    <div class=\"mdl-card mdl-shadow--2dp\" style=\"background-color: #24a4cd;\" _v-2a6739b2=\"\">\n      <div class=\"mdl-card__title\" _v-2a6739b2=\"\">\n        <h2 class=\"mdl-card__title-text\" _v-2a6739b2=\"\">Globey winners announced!</h2>\n      </div>\n      <div class=\"mdl-card__supporting-text\" _v-2a6739b2=\"\">\n        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n        tempor incididunt ut labore et dolore magna aliqua. \n      </div>\n    </div>\n    <br _v-2a6739b2=\"\">\n    <div class=\"mdl-card mdl-shadow--2dp\" style=\"border-radius: 25px;\" _v-2a6739b2=\"\">\n      <div class=\"mdl-card__title\" style=\"background-color: #24a4cd;\" _v-2a6739b2=\"\">\n        <h2 class=\"mdl-card__title-text\" _v-2a6739b2=\"\">Try our new course</h2>\n      </div>\n      <div class=\"mdl-card__supporting-text\" _v-2a6739b2=\"\">\n        Duis aute irure dolor in reprehenderit in voluptate velit esse\n        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\n        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n      </div>\n    </div>\n    <br _v-2a6739b2=\"\">\n    <div class=\"mdl-card mdl-shadow--2dp\" _v-2a6739b2=\"\">\n      <div class=\"mdl-card__title\" style=\"background-color: #24a4cd;\" _v-2a6739b2=\"\">\n        <h2 class=\"mdl-card__title-text\" _v-2a6739b2=\"\">Try our new course</h2>\n      </div>\n      <div class=\"mdl-card__supporting-text\" _v-2a6739b2=\"\">\n        Duis aute irure dolor in reprehenderit in voluptate velit esse\n        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\n        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n      </div>\n    </div>\n    <br _v-2a6739b2=\"\">\n    <div class=\"mdl-card mdl-shadow--2dp\" _v-2a6739b2=\"\">\n      <div class=\"mdl-card__title\" _v-2a6739b2=\"\">\n        <h2 class=\"mdl-card__title-text\" _v-2a6739b2=\"\">Try our new course</h2>\n      </div>\n      <div class=\"mdl-card__supporting-text\" _v-2a6739b2=\"\">\n        Duis aute irure dolor in reprehenderit in voluptate velit esse\n        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\n        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n      </div>\n    </div>\n  </div>  \n  <!-- {{{posts}}} -->\n";
+	module.exports = "  \n  {{{posts}}}\n";
 
 /***/ },
 /* 59 */
@@ -12271,77 +12189,21 @@
 
 	  methods: {},
 	  ready: function ready() {
-	    console.log("SET");
-	    console.log(this.schools);
-	    window.mySet = new _set2.default();
+	    // Get states with schools and set their default color
+	    var schoolSet = new _set2.default();
 	    this.schools.forEach(function (school) {
-	      mySet.add(school.state);
+	      schoolSet.add(school.state);
 	    });
 
-	    var states = (0, _from2.default)(mySet);
-	    console.log(states);
+	    var states = (0, _from2.default)(schoolSet);
 	    var defaultColoring = {};
 	    states.forEach(function (state) {
 	      defaultColoring[state] = { fillKey: 'HAS_SCHOOLS' };
 	    });
-	    console.log(defaultColoring);
-
-	    // var defaultColoring = {
-	    //   AR: {
-	    //     fillKey: 'HAS_SCHOOLS'
-	    //   },
-	    //   AL: {
-	    //     fillKey: 'HAS_SCHOOLS'
-	    //   },
-	    //   CA: {
-	    //     fillKey: 'HAS_SCHOOLS'
-	    //   },
-	    //   CO: {
-	    //     fillKey: 'HAS_SCHOOLS'
-	    //   },
-	    //   DC: {
-	    //     fillKey: 'HAS_SCHOOLS'
-	    //   },
-	    //   IL: {
-	    //     fillKey: 'HAS_SCHOOLS'
-	    //   },
-	    //   MI: {
-	    //     fillKey: 'HAS_SCHOOLS'
-	    //   },
-	    //   NJ: {
-	    //     fillKey: 'HAS_SCHOOLS'
-	    //   },
-	    //   NY: {
-	    //     fillKey: 'HAS_SCHOOLS'
-	    //   },
-	    //   OK: {
-	    //     fillKey: 'HAS_SCHOOLS'
-	    //   },
-	    //   TX: {
-	    //     fillKey: 'HAS_SCHOOLS'
-	    //   },
-	    //   UT: {
-	    //     fillKey: 'HAS_SCHOOLS'
-	    //   },
-	    //   VA: {
-	    //     fillKey: 'HAS_SCHOOLS'
-	    //   },
-	    //   VT: {
-	    //     fillKey: 'HAS_SCHOOLS'
-	    //   },
-	    //   WV: {
-	    //     fillKey: 'HAS_SCHOOLS'
-	    //   },
-	    //   WY: {
-	    //     fillKey: 'HAS_SCHOOLS'
-	    //   }
-	    // };
-	    // var states = ['AR', 'AL', 'CA', 'CO', 'DC', 'IL', 'MI', 'NJ', 'NY', 'OK', 'TX', 'UT', 'VA', 'VT', 'WV', 'WY'];
 
 	    // Smaller states are rendered as bubbles to make them clickable
-	    var bubblesData = [
-	    // {name: 'NY', centered: 'NY', radius: 10, fillKey: 'HAS_SCHOOLS'},
-	    { name: 'DC', centered: 'DC', radius: 10, fillKey: 'HAS_SCHOOLS' }];
+	    // Override when small unclickable states come through
+	    var bubblesData = [{ name: 'DC', centered: 'DC', radius: 10, fillKey: 'HAS_SCHOOLS' }];
 
 	    // {name: 'AL', centered: 'AL', radius: 10, fillKey: 'HAS_SCHOOLS'}
 	    initMap(defaultColoring, bubblesData, states);

@@ -34,9 +34,9 @@
                     <option value="Elementary School">Elementary Schools</option>
                     <option value="Middle School">Middle Schools</option>
                     <option value="High School">High Schools</option>
-                    <option value="College">College</option>
+                    <!-- <option value="College">College</option>
                     <option value="Alternative / At-risk Program">Alternative / At-risk Program</option>
-                    <option value="Community Center">Community Center</option>
+                    <option value="Community Center">Community Center</option> -->
                 </select>
             </div>
         </div>
@@ -50,30 +50,18 @@
                 | filterBy filterKey
                 | filterBy state in 'state'
                 | filterBy grade in 'grade'
-                | orderBy sortKey sortOrders[sortKey]" class="mdl-cell--6-col">
+                | orderBy sortKey sortOrders[sortKey]" 
+                class="mdl-cell--6-col"
+                >
                     <div v-for="key in columns" style="text-align: center; margin-bottom: 0.3rem;">
-                        <a target="_blank" href="https://myglife.org/usa/{{entry['wiki']}}">{{entry[key]}}</a>
+                        <a 
+                            target="_blank" 
+                            href="{{entry['url']}}"
+                            style="white-space: nowrap;"
+                        >{{entry[key]}}</a>
                     </div>
                 </div>
             </div>
-            <!-- <table>
-                <thead>
-                
-                </thead>
-                <tbody>
-                <tr v-for="
-                entry in data
-                | filterBy filterKey
-                | filterBy state in 'state'
-                | filterBy grade in 'grade'
-                | orderBy sortKey sortOrders[sortKey]">
-                    <td v-for="key in columns">
-                        <a target="_blank" href="https://myglife.org/usa/{{entry['wiki']}}">{{entry[key]}}</a>
-                    </td>
-                </tr>
-                </tbody>
-            </table> -->
-
         </div>
     </div>
 </template>
@@ -115,24 +103,10 @@
             sortBy: function (key) {
                 this.sortKey = key
                 this.sortOrders[key] = this.sortOrders[key] * -1
-            },
-            loadSchools: function(){
-                
-                // this.$http.get('http://dev.myglife.org/tasks/task_get_active_locations')
-                // this.$http.get('http://globaloria.com/api/core/get_category_posts/?slug=News')
-                //     .then(
-                //       function (response) {
-                //         console.log("Schools found");
-                //         console.log(response);
-                //       }, 
-                //       function (err) {
-                //         console.log(err);
-                //       }
-                //     );
             }
         },
         ready: function(){
-            this.loadSchools();
+            
         }
     }
 </script>

@@ -50,9 +50,9 @@
         ready(){
             $.ajax({
                 type: "GET",
-                url: 'http://dev.myglife.org/tasks/task_get_active_locations'
+                url: 'http://progress.myglife.org/tasks/task_get_active_locations'
               }).success( function(response){
-                console.log(JSON.parse(response));
+                // console.log(JSON.parse(response));
                 this.schools = JSON.parse(response);
               }.bind(this)).error(function(err){
                 console.log(err);
