@@ -15,6 +15,10 @@
     td{
         text-align: center;
     }
+
+    input::placeholder {
+        color: gray;
+    }
 </style>
 <template>
     <div>
