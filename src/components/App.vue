@@ -7,12 +7,32 @@
     <div>
         <div v-if="schools.length > 0" id="main" class="mdl-grid">
             <div id="leftnav" class="mdl-cell mdl-cell--9-col">
-                <globaloria-map :schools="schools"></globaloria-map>
-                <grid 
-                    :data="schools"
-                    :columns="['name']"
-                >
-                </grid>
+
+                <!-- <div class="class="mdl-grid"">
+                  <div class="mdl-cell mdl-cell--12-col">
+                    <grid 
+                        :data="schools"
+                        :columns="['name']"
+                    >
+                    </grid>
+                  </div>
+                </div> -->
+                
+                <div class="class="mdl-grid"">
+                  <div class="mdl-cell mdl-cell--12-col">
+                    <globaloria-map :schools="schools"></globaloria-map>
+                  </div>
+                </div>
+
+                <div class="class="mdl-grid"">
+                  <div class="mdl-cell mdl-cell--12-col">
+                    <grid 
+                        :data="schools"
+                        :columns="['name']"
+                    >
+                    </grid>
+                  </div>
+                </div>
             </div>
             <div id="rightnav" class="mdl-cell mdl-cell--3-col">
               

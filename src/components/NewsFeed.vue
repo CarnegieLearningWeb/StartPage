@@ -1,9 +1,12 @@
 <style scoped>
+ .newsfeed{
+  
+ }
 </style>
 
 <template>  
-  <div>
-    <h2>News</h2>
+  <div class="newsfeed">
+    <h2 style="font-size: 30px;">News</h2>
 
   <!-- {{{posts}}} -->
 

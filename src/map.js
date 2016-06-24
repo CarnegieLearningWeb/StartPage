@@ -127,7 +127,6 @@ window.initMap = function(defaultColoring, bubblesData, states){
       }); 
 
       datamap.svg.on('click', function() {
-        console.log("CLICKED");
         console.log(d3.event.pageY);
       }); 
     
