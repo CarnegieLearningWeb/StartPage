@@ -42,16 +42,38 @@
     #header > span, img{
       margin-right: 8px;
     }
+
+    #not-a-member-link{
+      /*float:right; */
+      /*margin-right: 0.5rem;*/
+      position: absolute;
+      right: 0.5rem;
+      height: 60px;
+
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      display: -webkit-flex;
+      -webkit-justify-content: center;
+    }
   </style>
 
 </head>
 
 <body>
-  <div id="header" style="margin-top: 0.3rem;">
-    <span>Welcome </span>
-    <img src="./gbanner.png" height="60px"> 
-    <span> Members!</span>
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--9-col">
+      <div id="header">
+        <img src="./gshield.png" height="60px"> 
+        <span>Welcome Globaloria Members!</span>
+      </div>
+    </div>
+    <div class="mdl-cell mdl-cell--3-col">
+      <a id="not-a-member-link" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" href="https://globaloria.com/courses-services/courses/"><span>Not a member yet?</span></a>
+    </div>
   </div>
+  
+  
   
   <div id="vue-root"></div>
 

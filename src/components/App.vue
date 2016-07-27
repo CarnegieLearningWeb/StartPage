@@ -38,7 +38,7 @@
               
               <news-feed></news-feed>
               
-              <div style="width:300px;">
+              <div style="width:100%;">
                 <!-- Replaced with actual feed through script. Should be configured from Twitter account. -->
                 <a v-twitter class="twitter-timeline" href="https://twitter.com/globaloria" data-widget-id="714918275847729152">Tweets by @globaloria</a>
               </div>

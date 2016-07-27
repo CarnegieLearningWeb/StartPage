@@ -11324,7 +11324,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "/Users/joan/Desktop/vue-d3/vue-d3/src/components/App.vue"
+	  var id = "/Users/joan/Desktop/GlobaloriaMap/vue-d3/src/components/App.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -11348,8 +11348,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-900ae10a&file=App.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./App.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-900ae10a&file=App.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./App.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-613fcaba&file=App.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./App.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-613fcaba&file=App.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./App.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -11754,18 +11754,38 @@
 	//     <div>
 	//         <div v-if="schools.length > 0" id="main" class="mdl-grid">
 	//             <div id="leftnav" class="mdl-cell mdl-cell--9-col">
-	//                 <globaloria-map :schools="schools"></globaloria-map>
-	//                 <grid
-	//                     :data="schools"
-	//                     :columns="['name']"
-	//                 >
-	//                 </grid>
+	//
+	//                 <!-- <div class="class="mdl-grid"">
+	//                   <div class="mdl-cell mdl-cell--12-col">
+	//                     <grid
+	//                         :data="schools"
+	//                         :columns="['name']"
+	//                     >
+	//                     </grid>
+	//                   </div>
+	//                 </div> -->
+	//
+	//                 <div class="class="mdl-grid"">
+	//                   <div class="mdl-cell mdl-cell--12-col">
+	//                     <globaloria-map :schools="schools"></globaloria-map>
+	//                   </div>
+	//                 </div>
+	//
+	//                 <div class="class="mdl-grid"">
+	//                   <div class="mdl-cell mdl-cell--12-col">
+	//                     <grid
+	//                         :data="schools"
+	//                         :columns="['name']"
+	//                     >
+	//                     </grid>
+	//                   </div>
+	//                 </div>
 	//             </div>
 	//             <div id="rightnav" class="mdl-cell mdl-cell--3-col">
 	//
 	//               <news-feed></news-feed>
 	//
-	//               <div style="width:300px;">
+	//               <div style="width:100%;">
 	//                 <!-- Replaced with actual feed through script. Should be configured from Twitter account. -->
 	//                 <a v-twitter class="twitter-timeline" href="https://twitter.com/globaloria" data-widget-id="714918275847729152">Tweets by @globaloria</a>
 	//               </div>
@@ -11793,7 +11813,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "/Users/joan/Desktop/vue-d3/vue-d3/src/components/Grid.vue"
+	  var id = "/Users/joan/Desktop/GlobaloriaMap/vue-d3/src/components/Grid.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -11817,8 +11837,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-175137dc&file=Grid.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Grid.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-175137dc&file=Grid.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Grid.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-26c5dc98&file=Grid.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Grid.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-26c5dc98&file=Grid.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Grid.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -11836,7 +11856,7 @@
 
 
 	// module
-	exports.push([module.id, "\n    .flex-center-center{\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex; \n        -webkit-box-pack: center; \n        -webkit-justify-content: center; \n            -ms-flex-pack: center; \n                justify-content: center; \n        -webkit-box-align: center; \n        -webkit-align-items: center; \n            -ms-flex-align: center; \n                align-items: center;\n\n        display: -webkit-flex;\n        -webkit-justify-content: center;\n        -webkit-align-items: center;\n    }\n    thead{\n        height: '1px' !important;\n    }\n    td{\n        text-align: center;\n    }\n", ""]);
+	exports.push([module.id, "\n    .flex-center-center{\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex; \n        -webkit-box-pack: center; \n        -webkit-justify-content: center; \n            -ms-flex-pack: center; \n                justify-content: center; \n        -webkit-box-align: center; \n        -webkit-align-items: center; \n            -ms-flex-align: center; \n                align-items: center;\n\n        display: -webkit-flex;\n        -webkit-justify-content: center;\n        -webkit-align-items: center;\n    }\n    thead{\n        height: '1px' !important;\n    }\n    td{\n        text-align: center;\n    }\n\n    input::-webkit-input-placeholder {\n        color: gray;\n    }\n\n    input::-moz-placeholder {\n        color: gray;\n    }\n\n    input:-ms-input-placeholder {\n        color: gray;\n    }\n\n    input::placeholder {\n        color: gray;\n    }\n", ""]);
 
 	// exports
 
@@ -11866,6 +11886,10 @@
 	//     }
 	//     td{
 	//         text-align: center;
+	//     }
+	//
+	//     input::placeholder {
+	//         color: gray;
 	//     }
 	// </style>
 	// <template>
@@ -11983,7 +12007,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "/Users/joan/Desktop/vue-d3/vue-d3/src/components/NewsFeed.vue"
+	  var id = "/Users/joan/Desktop/GlobaloriaMap/vue-d3/src/components/NewsFeed.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -12007,8 +12031,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2a6739b2&file=NewsFeed.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./NewsFeed.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2a6739b2&file=NewsFeed.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./NewsFeed.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-206790ff&file=NewsFeed.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./NewsFeed.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-206790ff&file=NewsFeed.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./NewsFeed.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -12026,7 +12050,7 @@
 
 
 	// module
-	exports.push([module.id, "\n", ""]);
+	exports.push([module.id, "\n .newsfeed[_v-206790ff]{\n  \n }\n", ""]);
 
 	// exports
 
@@ -12041,10 +12065,18 @@
 	    value: true
 	});
 	// <style scoped>
+	//  .newsfeed{
+	//
+	//  }
 	// </style>
 	//
 	// <template> 
-	//   {{{posts}}}
+	//   <div class="newsfeed">
+	//     <!-- <h2 style="font-size: 30px; text-align: center;">News</h2> -->
+	//
+	//     {{{posts}}}
+	//
+	//   </div>
 	// </template>
 	//
 	// <script>
@@ -12080,7 +12112,7 @@
 /* 58 */
 /***/ function(module, exports) {
 
-	module.exports = "  \n  {{{posts}}}\n";
+	module.exports = "  \n  <div class=\"newsfeed\" _v-206790ff=\"\">\n    <!-- <h2 style=\"font-size: 30px; text-align: center;\">News</h2> -->\n\n    {{{posts}}}\n\n  </div>\n";
 
 /***/ },
 /* 59 */
@@ -12097,7 +12129,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "/Users/joan/Desktop/vue-d3/vue-d3/src/components/GlobaloriaMap.vue"
+	  var id = "/Users/joan/Desktop/GlobaloriaMap/vue-d3/src/components/GlobaloriaMap.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -12121,8 +12153,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-3b2a6478&file=GlobaloriaMap.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./GlobaloriaMap.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-3b2a6478&file=GlobaloriaMap.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./GlobaloriaMap.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-edcbc4c0&file=GlobaloriaMap.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./GlobaloriaMap.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-edcbc4c0&file=GlobaloriaMap.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./GlobaloriaMap.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -12140,7 +12172,7 @@
 
 
 	// module
-	exports.push([module.id, "\n  #container[_v-3b2a6478]{\n    width: 100%; \n    display: -webkit-box; \n    display: -ms-flexbox; \n    display: flex; \n    display: -webkit-flex;\n    -webkit-box-align: center;\n    -webkit-align-items: center;\n        -ms-flex-align: center;\n            align-items: center; \n    -webkit-box-pack: center; \n    -webkit-justify-content: center; \n        -ms-flex-pack: center; \n            justify-content: center;\n  }\n", ""]);
+	exports.push([module.id, "\n  #container[_v-edcbc4c0]{\n    width: 100%; \n    display: -webkit-box; \n    display: -ms-flexbox; \n    display: flex; \n    display: -webkit-flex;\n    -webkit-box-align: center;\n    -webkit-align-items: center;\n        -ms-flex-align: center;\n            align-items: center; \n    -webkit-box-pack: center; \n    -webkit-justify-content: center; \n        -ms-flex-pack: center; \n            justify-content: center;\n  }\n", ""]);
 
 	// exports
 
@@ -13072,7 +13104,6 @@
 	      });
 
 	      datamap.svg.on('click', function () {
-	        console.log("CLICKED");
 	        console.log(d3.event.pageY);
 	      });
 	    }
@@ -13161,13 +13192,13 @@
 /* 97 */
 /***/ function(module, exports) {
 
-	module.exports = "\n  <div id=\"container\" _v-3b2a6478=\"\">\n    <div id=\"map\" style=\"width: 100%; height: 500px;\" _v-3b2a6478=\"\"></div>\n  </div>\n";
+	module.exports = "\n  <div id=\"container\" _v-edcbc4c0=\"\">\n    <div id=\"map\" style=\"width: 100%; height: 500px;\" _v-edcbc4c0=\"\"></div>\n  </div>\n";
 
 /***/ },
 /* 98 */
 /***/ function(module, exports) {
 
-	module.exports = "\n  \n    <div _v-900ae10a=\"\">\n        <div v-if=\"schools.length > 0\" id=\"main\" class=\"mdl-grid\" _v-900ae10a=\"\">\n            <div id=\"leftnav\" class=\"mdl-cell mdl-cell--9-col\" _v-900ae10a=\"\">\n                <globaloria-map :schools=\"schools\" _v-900ae10a=\"\"></globaloria-map>\n                <grid :data=\"schools\" :columns=\"['name']\" _v-900ae10a=\"\">\n                </grid>\n            </div>\n            <div id=\"rightnav\" class=\"mdl-cell mdl-cell--3-col\" _v-900ae10a=\"\">\n              \n              <news-feed _v-900ae10a=\"\"></news-feed>\n              \n              <div style=\"width:300px;\" _v-900ae10a=\"\">\n                <!-- Replaced with actual feed through script. Should be configured from Twitter account. -->\n                <a v-twitter=\"\" class=\"twitter-timeline\" href=\"https://twitter.com/globaloria\" data-widget-id=\"714918275847729152\" _v-900ae10a=\"\">Tweets by @globaloria</a>\n              </div>\n                  \n            </div>\n        </div>        \n    </div>\n  \n";
+	module.exports = "\n  \n    <div _v-613fcaba=\"\">\n        <div v-if=\"schools.length > 0\" id=\"main\" class=\"mdl-grid\" _v-613fcaba=\"\">\n            <div id=\"leftnav\" class=\"mdl-cell mdl-cell--9-col\" _v-613fcaba=\"\">\n\n                <!-- <div class=\"class=\"mdl-grid\"\">\n                  <div class=\"mdl-cell mdl-cell--12-col\">\n                    <grid \n                        :data=\"schools\"\n                        :columns=\"['name']\"\n                    >\n                    </grid>\n                  </div>\n                </div> -->\n                \n                <div class=\"class=\" mdl-grid\"\"=\"\" _v-613fcaba=\"\">\n                  <div class=\"mdl-cell mdl-cell--12-col\" _v-613fcaba=\"\">\n                    <globaloria-map :schools=\"schools\" _v-613fcaba=\"\"></globaloria-map>\n                  </div>\n                </div>\n\n                <div class=\"class=\" mdl-grid\"\"=\"\" _v-613fcaba=\"\">\n                  <div class=\"mdl-cell mdl-cell--12-col\" _v-613fcaba=\"\">\n                    <grid :data=\"schools\" :columns=\"['name']\" _v-613fcaba=\"\">\n                    </grid>\n                  </div>\n                </div>\n            </div>\n            <div id=\"rightnav\" class=\"mdl-cell mdl-cell--3-col\" _v-613fcaba=\"\">\n              \n              <news-feed _v-613fcaba=\"\"></news-feed>\n              \n              <div style=\"width:100%;\" _v-613fcaba=\"\">\n                <!-- Replaced with actual feed through script. Should be configured from Twitter account. -->\n                <a v-twitter=\"\" class=\"twitter-timeline\" href=\"https://twitter.com/globaloria\" data-widget-id=\"714918275847729152\" _v-613fcaba=\"\">Tweets by @globaloria</a>\n              </div>\n                  \n            </div>\n        </div>        \n    </div>\n  \n";
 
 /***/ }
 /******/ ]);
