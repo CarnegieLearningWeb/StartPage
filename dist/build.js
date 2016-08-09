@@ -11718,7 +11718,7 @@
 	    ready: function ready() {
 	        $.ajax({
 	            type: "GET",
-	            url: 'http://progress.myglife.org/tasks/task_get_active_locations'
+	            url: 'https://progress.myglife.org/tasks/task_get_active_locations'
 	        }).success(function (response) {
 	            // console.log(JSON.parse(response));
 	            this.schools = JSON.parse(response);
@@ -11920,7 +11920,7 @@
 	//         <div v-if="state!=''" class="flex-center-center">{{schoolFilterFullname}} in {{state}}</div>
 	//
 	//         <div class="flex-center-center">
-	//             <div class="mdl-grid">
+	//             <div class="mdl-grid" style="width: 100%;">
 	//                 <div v-for="
 	//                 (index, entry) in data
 	//                 | filterBy filterKey
@@ -11990,7 +11990,7 @@
 /* 53 */
 /***/ function(module, exports) {
 
-	module.exports = "\n    <div>\n        <input id=\"state\" v-model=\"state\" type=\"hidden\">\n        \n        <div class=\"flex-center-center\">\n            <div>\n                <div v-mdl class=\"mdl-textfield mdl-js-textfield\">\n                    <input class=\"mdl-textfield__input\" type=\"text\" id=\"searchbox\" name=\"query\" v-model=\"filterKey\" placeholder=\"Enter your school name\">\n                    <label class=\"mdl-textfield__label\" for=\"searchbox\">Text...</label>\n                </div>\n            </div>\n            \n            <div>\n                <select v-model=\"grade\">\n                    <option value=\"\">Filter by...</option>\n                    <option value=\"Elementary School\">Elementary Schools</option>\n                    <option value=\"Middle School\">Middle Schools</option>\n                    <option value=\"High School\">High Schools</option>\n                    <!-- <option value=\"College\">College</option>\n                    <option value=\"Alternative / At-risk Program\">Alternative / At-risk Program</option>\n                    <option value=\"Community Center\">Community Center</option> -->\n                </select>\n            </div>\n        </div>\n        \n        <div v-if=\"state!=''\" class=\"flex-center-center\">{{schoolFilterFullname}} in {{state}}</div>\n\n        <div class=\"flex-center-center\">\n            <div class=\"mdl-grid\">\n                <div v-for=\"\n                (index, entry) in data\n                | filterBy filterKey\n                | filterBy state in 'state'\n                | filterBy grade in 'grade'\n                | orderBy sortKey sortOrders[sortKey]\" \n                class=\"mdl-cell--6-col\"\n                >\n                    <div v-for=\"key in columns\" style=\"text-align: center; margin-bottom: 0.3rem;\">\n                        <a \n                            target=\"_blank\" \n                            href=\"{{entry['url']}}\"\n                            style=\"white-space: nowrap;\"\n                        >{{entry[key]}}</a>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n";
+	module.exports = "\n    <div>\n        <input id=\"state\" v-model=\"state\" type=\"hidden\">\n        \n        <div class=\"flex-center-center\">\n            <div>\n                <div v-mdl class=\"mdl-textfield mdl-js-textfield\">\n                    <input class=\"mdl-textfield__input\" type=\"text\" id=\"searchbox\" name=\"query\" v-model=\"filterKey\" placeholder=\"Enter your school name\">\n                    <label class=\"mdl-textfield__label\" for=\"searchbox\">Text...</label>\n                </div>\n            </div>\n            \n            <div>\n                <select v-model=\"grade\">\n                    <option value=\"\">Filter by...</option>\n                    <option value=\"Elementary School\">Elementary Schools</option>\n                    <option value=\"Middle School\">Middle Schools</option>\n                    <option value=\"High School\">High Schools</option>\n                    <!-- <option value=\"College\">College</option>\n                    <option value=\"Alternative / At-risk Program\">Alternative / At-risk Program</option>\n                    <option value=\"Community Center\">Community Center</option> -->\n                </select>\n            </div>\n        </div>\n        \n        <div v-if=\"state!=''\" class=\"flex-center-center\">{{schoolFilterFullname}} in {{state}}</div>\n\n        <div class=\"flex-center-center\">\n            <div class=\"mdl-grid\" style=\"width: 100%;\">\n                <div v-for=\"\n                (index, entry) in data\n                | filterBy filterKey\n                | filterBy state in 'state'\n                | filterBy grade in 'grade'\n                | orderBy sortKey sortOrders[sortKey]\" \n                class=\"mdl-cell--6-col\"\n                >\n                    <div v-for=\"key in columns\" style=\"text-align: center; margin-bottom: 0.3rem;\">\n                        <a \n                            target=\"_blank\" \n                            href=\"{{entry['url']}}\"\n                            style=\"white-space: nowrap;\"\n                        >{{entry[key]}}</a>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n";
 
 /***/ },
 /* 54 */
@@ -12092,7 +12092,7 @@
 
 	        $.ajax({
 	            type: "GET",
-	            url: 'http://globaloria.com/api/core/get_page/?slug=globaloriastart',
+	            url: 'https://globaloria.com/api/core/get_page/?slug=globaloriastart',
 	            dataType: 'jsonp'
 	        }).success(function (response) {
 	            // console.log(JSON.stringify(response));

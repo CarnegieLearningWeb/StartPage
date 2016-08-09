@@ -48,7 +48,7 @@
         <div v-if="state!=''" class="flex-center-center">{{schoolFilterFullname}} in {{state}}</div>
 
         <div class="flex-center-center">
-            <div class="mdl-grid">
+            <div class="mdl-grid" style="width: 100%;">
                 <div v-for="
                 (index, entry) in data
                 | filterBy filterKey

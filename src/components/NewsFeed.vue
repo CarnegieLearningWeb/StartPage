@@ -30,7 +30,7 @@
 
           $.ajax({
               type: "GET",
-              url: 'http://globaloria.com/api/core/get_page/?slug=globaloriastart',
+              url: 'https://globaloria.com/api/core/get_page/?slug=globaloriastart',
               dataType: 'jsonp',
           }).success( function(response){
               // console.log(JSON.stringify(response));

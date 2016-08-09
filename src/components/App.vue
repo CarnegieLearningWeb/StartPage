@@ -70,7 +70,7 @@
         ready(){
             $.ajax({
                 type: "GET",
-                url: 'http://progress.myglife.org/tasks/task_get_active_locations'
+                url: 'https://progress.myglife.org/tasks/task_get_active_locations'
               }).success( function(response){
                 // console.log(JSON.parse(response));
                 this.schools = JSON.parse(response);
