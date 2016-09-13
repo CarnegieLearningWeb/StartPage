@@ -37,12 +37,24 @@
             <div id="rightnav" class="mdl-cell mdl-cell--3-col">
               
               <news-feed></news-feed>
-              
-              <div style="width:100%;">
-                <!-- Replaced with actual feed through script. Should be configured from Twitter account. -->
-                <a v-twitter class="twitter-timeline" href="https://twitter.com/globaloria" data-widget-id="714918275847729152">Tweets by @globaloria</a>
+
+              <div class="mdl-card mdl-shadow--2dp" style="width:100%;">
+                <div class="mdl-card__title" style="background-color: lightgrey;">
+                  <h2 class="mdl-card__title-text" style="font-size: 18px;">Tweets by @globaloria</h2>
+                </div>
+                <div class="mdl-card__supporting-text">
+                  <div style="width:100%;">
+                    <!-- Replaced with actual feed through script. Should be configured from Twitter account. -->
+                    <a 
+                      v-twitter 
+                      class="twitter-timeline" 
+                      href="https://twitter.com/globaloria" 
+                      data-widget-id="714918275847729152"
+                      data-chrome="noheader"
+                      >Tweets by @globaloria</a>
+                  </div>    
+                </div>
               </div>
-                  
             </div>
         </div>        
     </div>

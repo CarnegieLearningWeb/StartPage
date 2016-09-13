@@ -11324,7 +11324,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "/Users/joan/Desktop/GlobaloriaMap/vue-d3/src/components/App.vue"
+	  var id = "/Users/joancc/Globaloria/GlobaloriaMap/vue-d3/src/components/App.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -11348,8 +11348,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-613fcaba&file=App.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./App.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-613fcaba&file=App.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./App.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-4c5c7d1f&file=App.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./App.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-4c5c7d1f&file=App.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./App.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -11785,11 +11785,23 @@
 	//
 	//               <news-feed></news-feed>
 	//
-	//               <div style="width:100%;">
-	//                 <!-- Replaced with actual feed through script. Should be configured from Twitter account. -->
-	//                 <a v-twitter class="twitter-timeline" href="https://twitter.com/globaloria" data-widget-id="714918275847729152">Tweets by @globaloria</a>
+	//               <div class="mdl-card mdl-shadow--2dp" style="width:100%;">
+	//                 <div class="mdl-card__title" style="background-color: lightgrey;">
+	//                   <h2 class="mdl-card__title-text" style="font-size: 18px;">Tweets by @globaloria</h2>
+	//                 </div>
+	//                 <div class="mdl-card__supporting-text">
+	//                   <div style="width:100%;">
+	//                     <!-- Replaced with actual feed through script. Should be configured from Twitter account. -->
+	//                     <a
+	//                       v-twitter
+	//                       class="twitter-timeline"
+	//                       href="https://twitter.com/globaloria"
+	//                       data-widget-id="714918275847729152"
+	//                       data-chrome="noheader"
+	//                       >Tweets by @globaloria</a>
+	//                   </div>   
+	//                 </div>
 	//               </div>
-	//
 	//             </div>
 	//         </div>       
 	//     </div>
@@ -11813,7 +11825,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "/Users/joan/Desktop/GlobaloriaMap/vue-d3/src/components/Grid.vue"
+	  var id = "/Users/joancc/Globaloria/GlobaloriaMap/vue-d3/src/components/Grid.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -11837,8 +11849,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-26c5dc98&file=Grid.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Grid.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-26c5dc98&file=Grid.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Grid.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-0f2cfeb8&file=Grid.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Grid.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-0f2cfeb8&file=Grid.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./Grid.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -11932,7 +11944,7 @@
 	//                     <div v-for="key in columns" style="text-align: center; margin-bottom: 0.3rem;">
 	//                         <a
 	//                             target="_blank"
-	//                             href="{{entry['url']}}"
+	//                             href="{{entry['url']+'/index.php/Special:UserLogin'}}"
 	//                             style="white-space: nowrap;"
 	//                         >{{entry[key]}}</a>
 	//                     </div>
@@ -11990,7 +12002,7 @@
 /* 53 */
 /***/ function(module, exports) {
 
-	module.exports = "\n    <div>\n        <input id=\"state\" v-model=\"state\" type=\"hidden\">\n        \n        <div class=\"flex-center-center\">\n            <div>\n                <div v-mdl class=\"mdl-textfield mdl-js-textfield\">\n                    <input class=\"mdl-textfield__input\" type=\"text\" id=\"searchbox\" name=\"query\" v-model=\"filterKey\" placeholder=\"Enter your school name\">\n                    <label class=\"mdl-textfield__label\" for=\"searchbox\">Text...</label>\n                </div>\n            </div>\n            \n            <div>\n                <select v-model=\"grade\">\n                    <option value=\"\">Filter by...</option>\n                    <option value=\"Elementary School\">Elementary Schools</option>\n                    <option value=\"Middle School\">Middle Schools</option>\n                    <option value=\"High School\">High Schools</option>\n                    <!-- <option value=\"College\">College</option>\n                    <option value=\"Alternative / At-risk Program\">Alternative / At-risk Program</option>\n                    <option value=\"Community Center\">Community Center</option> -->\n                </select>\n            </div>\n        </div>\n        \n        <div v-if=\"state!=''\" class=\"flex-center-center\">{{schoolFilterFullname}} in {{state}}</div>\n\n        <div class=\"flex-center-center\">\n            <div class=\"mdl-grid\" style=\"width: 100%;\">\n                <div v-for=\"\n                (index, entry) in data\n                | filterBy filterKey\n                | filterBy state in 'state'\n                | filterBy grade in 'grade'\n                | orderBy sortKey sortOrders[sortKey]\" \n                class=\"mdl-cell--6-col\"\n                >\n                    <div v-for=\"key in columns\" style=\"text-align: center; margin-bottom: 0.3rem;\">\n                        <a \n                            target=\"_blank\" \n                            href=\"{{entry['url']}}\"\n                            style=\"white-space: nowrap;\"\n                        >{{entry[key]}}</a>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n";
+	module.exports = "\n    <div>\n        <input id=\"state\" v-model=\"state\" type=\"hidden\">\n        \n        <div class=\"flex-center-center\">\n            <div>\n                <div v-mdl class=\"mdl-textfield mdl-js-textfield\">\n                    <input class=\"mdl-textfield__input\" type=\"text\" id=\"searchbox\" name=\"query\" v-model=\"filterKey\" placeholder=\"Enter your school name\">\n                    <label class=\"mdl-textfield__label\" for=\"searchbox\">Text...</label>\n                </div>\n            </div>\n            \n            <div>\n                <select v-model=\"grade\">\n                    <option value=\"\">Filter by...</option>\n                    <option value=\"Elementary School\">Elementary Schools</option>\n                    <option value=\"Middle School\">Middle Schools</option>\n                    <option value=\"High School\">High Schools</option>\n                    <!-- <option value=\"College\">College</option>\n                    <option value=\"Alternative / At-risk Program\">Alternative / At-risk Program</option>\n                    <option value=\"Community Center\">Community Center</option> -->\n                </select>\n            </div>\n        </div>\n        \n        <div v-if=\"state!=''\" class=\"flex-center-center\">{{schoolFilterFullname}} in {{state}}</div>\n\n        <div class=\"flex-center-center\">\n            <div class=\"mdl-grid\" style=\"width: 100%;\">\n                <div v-for=\"\n                (index, entry) in data\n                | filterBy filterKey\n                | filterBy state in 'state'\n                | filterBy grade in 'grade'\n                | orderBy sortKey sortOrders[sortKey]\" \n                class=\"mdl-cell--6-col\"\n                >\n                    <div v-for=\"key in columns\" style=\"text-align: center; margin-bottom: 0.3rem;\">\n                        <a \n                            target=\"_blank\" \n                            href=\"{{entry['url']+'/index.php/Special:UserLogin'}}\"\n                            style=\"white-space: nowrap;\"\n                        >{{entry[key]}}</a>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n";
 
 /***/ },
 /* 54 */
@@ -12007,7 +12019,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "/Users/joan/Desktop/GlobaloriaMap/vue-d3/src/components/NewsFeed.vue"
+	  var id = "/Users/joancc/Globaloria/GlobaloriaMap/vue-d3/src/components/NewsFeed.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -12031,8 +12043,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-206790ff&file=NewsFeed.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./NewsFeed.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-206790ff&file=NewsFeed.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./NewsFeed.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6f715c03&file=NewsFeed.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./NewsFeed.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6f715c03&file=NewsFeed.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./NewsFeed.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -12050,7 +12062,7 @@
 
 
 	// module
-	exports.push([module.id, "\n .newsfeed[_v-206790ff]{\n  \n }\n", ""]);
+	exports.push([module.id, "\n .newsfeed[_v-6f715c03]{\n  \n }\n", ""]);
 
 	// exports
 
@@ -12112,7 +12124,7 @@
 /* 58 */
 /***/ function(module, exports) {
 
-	module.exports = "  \n  <div class=\"newsfeed\" _v-206790ff=\"\">\n    <!-- <h2 style=\"font-size: 30px; text-align: center;\">News</h2> -->\n\n    {{{posts}}}\n\n  </div>\n";
+	module.exports = "  \n  <div class=\"newsfeed\" _v-6f715c03=\"\">\n    <!-- <h2 style=\"font-size: 30px; text-align: center;\">News</h2> -->\n\n    {{{posts}}}\n\n  </div>\n";
 
 /***/ },
 /* 59 */
@@ -12129,7 +12141,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), true)
 	  if (!hotAPI.compatible) return
-	  var id = "/Users/joan/Desktop/GlobaloriaMap/vue-d3/src/components/GlobaloriaMap.vue"
+	  var id = "/Users/joancc/Globaloria/GlobaloriaMap/vue-d3/src/components/GlobaloriaMap.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -12153,8 +12165,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-edcbc4c0&file=GlobaloriaMap.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./GlobaloriaMap.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-edcbc4c0&file=GlobaloriaMap.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./GlobaloriaMap.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-b36ad5c8&file=GlobaloriaMap.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./GlobaloriaMap.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-b36ad5c8&file=GlobaloriaMap.vue&scoped=true!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./GlobaloriaMap.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -12172,7 +12184,7 @@
 
 
 	// module
-	exports.push([module.id, "\n  #container[_v-edcbc4c0]{\n    width: 100%; \n    display: -webkit-box; \n    display: -ms-flexbox; \n    display: flex; \n    display: -webkit-flex;\n    -webkit-box-align: center;\n    -webkit-align-items: center;\n        -ms-flex-align: center;\n            align-items: center; \n    -webkit-box-pack: center; \n    -webkit-justify-content: center; \n        -ms-flex-pack: center; \n            justify-content: center;\n  }\n", ""]);
+	exports.push([module.id, "\n  #container[_v-b36ad5c8]{\n    width: 100%; \n    display: -webkit-box; \n    display: -ms-flexbox; \n    display: flex; \n    display: -webkit-flex;\n    -webkit-box-align: center;\n    -webkit-align-items: center;\n        -ms-flex-align: center;\n            align-items: center; \n    -webkit-box-pack: center; \n    -webkit-justify-content: center; \n        -ms-flex-pack: center; \n            justify-content: center;\n  }\n", ""]);
 
 	// exports
 
@@ -13192,13 +13204,13 @@
 /* 97 */
 /***/ function(module, exports) {
 
-	module.exports = "\n  <div id=\"container\" _v-edcbc4c0=\"\">\n    <div id=\"map\" style=\"width: 100%; height: 500px;\" _v-edcbc4c0=\"\"></div>\n  </div>\n";
+	module.exports = "\n  <div id=\"container\" _v-b36ad5c8=\"\">\n    <div id=\"map\" style=\"width: 100%; height: 500px;\" _v-b36ad5c8=\"\"></div>\n  </div>\n";
 
 /***/ },
 /* 98 */
 /***/ function(module, exports) {
 
-	module.exports = "\n  \n    <div _v-613fcaba=\"\">\n        <div v-if=\"schools.length > 0\" id=\"main\" class=\"mdl-grid\" _v-613fcaba=\"\">\n            <div id=\"leftnav\" class=\"mdl-cell mdl-cell--9-col\" _v-613fcaba=\"\">\n\n                <!-- <div class=\"class=\"mdl-grid\"\">\n                  <div class=\"mdl-cell mdl-cell--12-col\">\n                    <grid \n                        :data=\"schools\"\n                        :columns=\"['name']\"\n                    >\n                    </grid>\n                  </div>\n                </div> -->\n                \n                <div class=\"class=\" mdl-grid\"\"=\"\" _v-613fcaba=\"\">\n                  <div class=\"mdl-cell mdl-cell--12-col\" _v-613fcaba=\"\">\n                    <globaloria-map :schools=\"schools\" _v-613fcaba=\"\"></globaloria-map>\n                  </div>\n                </div>\n\n                <div class=\"class=\" mdl-grid\"\"=\"\" _v-613fcaba=\"\">\n                  <div class=\"mdl-cell mdl-cell--12-col\" _v-613fcaba=\"\">\n                    <grid :data=\"schools\" :columns=\"['name']\" _v-613fcaba=\"\">\n                    </grid>\n                  </div>\n                </div>\n            </div>\n            <div id=\"rightnav\" class=\"mdl-cell mdl-cell--3-col\" _v-613fcaba=\"\">\n              \n              <news-feed _v-613fcaba=\"\"></news-feed>\n              \n              <div style=\"width:100%;\" _v-613fcaba=\"\">\n                <!-- Replaced with actual feed through script. Should be configured from Twitter account. -->\n                <a v-twitter=\"\" class=\"twitter-timeline\" href=\"https://twitter.com/globaloria\" data-widget-id=\"714918275847729152\" _v-613fcaba=\"\">Tweets by @globaloria</a>\n              </div>\n                  \n            </div>\n        </div>        \n    </div>\n  \n";
+	module.exports = "\n  \n    <div _v-4c5c7d1f=\"\">\n        <div v-if=\"schools.length > 0\" id=\"main\" class=\"mdl-grid\" _v-4c5c7d1f=\"\">\n            <div id=\"leftnav\" class=\"mdl-cell mdl-cell--9-col\" _v-4c5c7d1f=\"\">\n\n                <!-- <div class=\"class=\"mdl-grid\"\">\n                  <div class=\"mdl-cell mdl-cell--12-col\">\n                    <grid \n                        :data=\"schools\"\n                        :columns=\"['name']\"\n                    >\n                    </grid>\n                  </div>\n                </div> -->\n                \n                <div class=\"class=\" mdl-grid\"\"=\"\" _v-4c5c7d1f=\"\">\n                  <div class=\"mdl-cell mdl-cell--12-col\" _v-4c5c7d1f=\"\">\n                    <globaloria-map :schools=\"schools\" _v-4c5c7d1f=\"\"></globaloria-map>\n                  </div>\n                </div>\n\n                <div class=\"class=\" mdl-grid\"\"=\"\" _v-4c5c7d1f=\"\">\n                  <div class=\"mdl-cell mdl-cell--12-col\" _v-4c5c7d1f=\"\">\n                    <grid :data=\"schools\" :columns=\"['name']\" _v-4c5c7d1f=\"\">\n                    </grid>\n                  </div>\n                </div>\n            </div>\n            <div id=\"rightnav\" class=\"mdl-cell mdl-cell--3-col\" _v-4c5c7d1f=\"\">\n              \n              <news-feed _v-4c5c7d1f=\"\"></news-feed>\n\n              <div class=\"mdl-card mdl-shadow--2dp\" style=\"width:100%;\" _v-4c5c7d1f=\"\">\n                <div class=\"mdl-card__title\" style=\"background-color: lightgrey;\" _v-4c5c7d1f=\"\">\n                  <h2 class=\"mdl-card__title-text\" style=\"font-size: 18px;\" _v-4c5c7d1f=\"\">Tweets by @globaloria</h2>\n                </div>\n                <div class=\"mdl-card__supporting-text\" _v-4c5c7d1f=\"\">\n                  <div style=\"width:100%;\" _v-4c5c7d1f=\"\">\n                    <!-- Replaced with actual feed through script. Should be configured from Twitter account. -->\n                    <a v-twitter=\"\" class=\"twitter-timeline\" href=\"https://twitter.com/globaloria\" data-widget-id=\"714918275847729152\" data-chrome=\"noheader\" _v-4c5c7d1f=\"\">Tweets by @globaloria</a>\n                  </div>    \n                </div>\n              </div>\n            </div>\n        </div>        \n    </div>\n  \n";
 
 /***/ }
 /******/ ]);
