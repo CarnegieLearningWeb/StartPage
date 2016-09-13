@@ -60,7 +60,7 @@
                     <div v-for="key in columns" style="text-align: center; margin-bottom: 0.3rem;">
                         <a 
                             target="_blank" 
-                            href="{{entry['url']+'/index.php/Special:UserLogin'}}"
+                            href="{{entry['url']+'/index.php/Main_Page'}}"
                             style="white-space: nowrap;"
                         >{{entry[key]}}</a>
                     </div>
